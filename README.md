@@ -4,6 +4,17 @@ ScamGuard is a production-ready Chrome Extension (Manifest V3) that provides rea
 
 It works by extracting structural and contextual signals from the active web page and analyzing them securely using Anthropic's Claude 3.5 Sonnet API.
 
+## 🚀 Features
+
+- 🔍 Real-time URL scam analysis
+- 🛡️ Phishing detection system
+- ⚡ Fast browser-side scanning
+- 📌 Popup dashboard with quick status checks
+- 🧠 AI-inspired heuristic analysis
+- 🚫 Malicious site warning alerts
+- ⚙️ Custom settings/options page
+- 📊 Clean and lightweight UI
+
 ## Architecture Overview
 
 ScamGuard uses a layered analysis approach to minimize latency and prevent unnecessary API calls:
@@ -43,9 +54,12 @@ ScamGuard requires an Anthropic API Key to utilize Claude for semantic analysis.
 * **DeclarativeNetRequest**: Auto-blocking is currently architected but requires declarative rule hydration via `chrome.declarativeNetRequest.updateDynamicRules` which must be implemented for full active blocking.
 
 ## Contributing
-
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request!
+
+## Screenshot
+<img width="399" height="205" alt="image" src="https://github.com/user-attachments/assets/3c7dfc42-b5a0-496d-80af-74a5346e6fbc" />
+
