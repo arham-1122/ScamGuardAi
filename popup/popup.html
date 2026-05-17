@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="shield">🛡️</span>
+            <h1>ScamGuard</h1>
+        </div>
+        <div class="domain-info" id="current-domain">Analyzing...</div>
+    </header>
+
+    <main>
+        <div class="status-container">
+            <div class="gauge-container">
+                <svg viewBox="0 0 100 100" class="gauge">
+                    <circle class="gauge-bg" cx="50" cy="50" r="45" />
+                    <circle class="gauge-progress" id="gauge-fill" cx="50" cy="50" r="45" />
+                </svg>
+                <div class="score-display">
+                    <span id="score-text">--</span>
+                    <span class="score-label">Risk Score</span>
+                </div>
+            </div>
+            
+            <div class="threat-summary" id="summary-card">
+                <span class="badge" id="risk-badge">Checking</span>
+                <p id="user-warning">Please wait while we analyze the page signals...</p>
+            </div>
+        </div>
+
+        <details class="details-accordion">
+            <summary>Analysis Details</summary>
+            
+            <div class="detail-section">
+                <h4>Red Flags</h4>
+                <ul id="red-flags-list" class="flags-list warning">
+                    <li>No recent flags</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h4>Safe Signals</h4>
+                <ul id="safe-signals-list" class="flags-list safe">
+                    <li>Analysis pending</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h4>Technical Summary</h4>
+                <div class="technical-text" id="tech-summary">...</div>
+            </div>
+        </details>
+
+        <div class="action-buttons">
+            <button id="btn-dismiss" class="btn btn-secondary">I'll be careful</button>
+            <button id="btn-report" class="btn btn-outline">Report False Positive</button>
+            <button id="btn-block" class="btn btn-danger">Block this site</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="meta-info">
+            <span id="last-analyzed">Just now</span>
+            <span class="credit">Powered by Claude AI</span>
+        </div>
+        <button id="btn-options" class="settings-gear" aria-label="Options">⚙️</button>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+</html>

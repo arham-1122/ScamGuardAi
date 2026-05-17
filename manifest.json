@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "ScamGuard",
+  "version": "1.0.0",
+  "description": "Real-time AI protection against phishing, scams, and manipulative content.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "declarativeNetRequest",
+    "webNavigation",
+    "contextMenus",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content/content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src https://api.anthropic.com"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content/content-style.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
