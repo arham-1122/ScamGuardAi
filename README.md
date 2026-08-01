@@ -4,16 +4,16 @@ ScamGuard is a production-ready Chrome Extension (Manifest V3) that provides rea
 
 It works by extracting structural and contextual signals from the active web page and analyzing them securely using Anthropic's Claude 3.5 Sonnet API.
 
-## 🚀 Features
+##  Features
 
-- 🔍 Real-time URL scam analysis
-- 🛡️ Phishing detection system
-- ⚡ Fast browser-side scanning
-- 📌 Popup dashboard with quick status checks
-- 🧠 AI-inspired heuristic analysis
-- 🚫 Malicious site warning alerts
-- ⚙️ Custom settings/options page
-- 📊 Clean and lightweight UI
+-  Real-time URL scam analysis
+-  Phishing detection system
+-  Fast browser-side scanning
+-  Popup dashboard with quick status checks
+-  AI-inspired heuristic analysis
+-  Malicious site warning alerts
+-  Custom settings/options page
+-  Clean and lightweight UI
 
 ## Architecture Overview
 
